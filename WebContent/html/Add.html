@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>添加</title>
+<script type="text/javascript" >
+	function check(){
+		var hobby="";
+		//获取表单里的数据
+		var check=document.Add.hobby;
+		//将获取得到的数据拼接成一个字符串
+		
+		for(i=0;i<check.length;i++){
+			if(document.Add.hobby[i].checked){
+				if(i>0){
+					hobby=hobby+","+document.Add.hobby[i].value;
+				}else{
+					hobby=document.Add.hobby[i].value;
+				}
+			}
+		}
+		//将字符串放到hobbyForm的隐藏框中
+		document.Add.hobbyForm.value=hobby;
+	}
+
+</script>
+<style type="text/css">
+	.a{
+		width:150px;
+		margin:5px;
+	}
+</style>
+</head>
+<body>
+	<form action="/DianXingYingXiao/ServletDemo" method="post" name="Add">
+		<table>
+			<tr>
+				<td>员工编号:</td>
+				<td><input name="empno" type="text" class="a" maxlength="8" value="" ></td>
+				<td>员工姓名:</td>
+				<td><input name="ename" type="text" class="a" maxlength="8" value="" ></td>
+			</tr>
+			<tr>
+				<td>密码:</td>
+				<td><input name="password" type="password" class="a" maxlength="8" value="" ></td>
+				<td>性别:</td>
+				<td>
+					<input name="sex" type="radio"   value="男" >男
+					<input name="sex" type="radio"   value="女" >女
+				</td>
+			</tr>
+			<tr>
+				<td>工作:</td>
+				<td><input name="job" type="text" class="a"  value="" ></td>
+				<td>入职日期:</td>
+				<td><input name="hiredate" type="text" class="a"  value="" ></td>
+			</tr>
+			<tr>
+				<td>工资:</td>
+				<td><input name="sal" type="text" class="a"  value="" ></td>
+				<td>部门编号:</td>
+				<td><input name="deptno" type="text" class="a"  value="" ></td>
+			</tr>
+			<tr>
+				<td>爱好:</td>
+				<td>
+					<input name="hobby" type="checkbox"   value="看片" >看片
+					<input name="hobby" type="checkbox"   value="篮球" >篮球
+					<input name="hobby" type="checkbox"   value="健身" >健身<br>
+					<input name="hobby" type="checkbox"   value="游泳" >游泳
+					<input name="hobby" type="checkbox"   value="滑雪" >滑雪
+					<input name="hobby" type="checkbox"   value="打LOL" >打LOL<br>
+					<input name="hobby" type="checkbox"   value="学习" checked>学习
+					<input name="hobbyForm" type="hidden" value="" id="hobbyForm">
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input  type="submit"  maxlength="8" value="提交" onclick="check() "></td>
+				<td><input  type="reset"  maxlength="8" value="返回" ></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
