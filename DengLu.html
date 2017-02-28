@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		.a{
+			
+			width: 65px;
+		}
+		.b{
+			width: 150px;
+			margin:5px;
+		}
+		.image{
+			background: url('imges/html1.jpg') no-repeat;
+		}
+		.BianJu{
+			margin-top: 180px;
+			margin-left: 40%;
+			width: 400px;
+			height: 240px;
+			background: url('imges/html3.jpg') no-repeat; 
+			-webkit-box-shadow: 10px 10px 10px #FFFFFF;
+			box-shadow: 10px 10px 10px #FFFFFF;
+			filter:progid:DXImageTransform.Microsoft.Shadow(color=#909090,direction=120,strength=3);/*ie*/
+			/*safari或chrome
+			/*-text-shadow: 20px 50px 50px red ;*/
+			/*border: solid red;*/
+		}
+	</style>
+</head>
+<body class="image" >
+	<form action="DengLuCheck.jsp" method="post" > 
+		<div class="BianJu">
+			<center>
+				<p><font class="b" color="Aqua" face="隶书" size="7">员工管理系统</font></p><br>
+				&nbsp;&nbsp;用户ID：<input type="text" value="" name="userid" maxlength="8" class="b" ><br>
+				用户密码：<input type="password"  class="b" value="" name="password" maxlength="8"><br>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="" value="立即登陆" class="a" >&nbsp;
+					<input type="reset" name="" value="重置" >&nbsp;
+					<input type="button" name="" value="注册" onclick="javascript:window.location.href='ZhuCe.jsp'">
+				</p>
+			</center>
+		</div>
+	</form>
+</body>
+</html>
